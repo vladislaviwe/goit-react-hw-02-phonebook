@@ -1,6 +1,9 @@
 import { Component } from 'react';
+
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
+
+import { LabelText, Input, FormBtn } from './PhonebookStyled';
 
 export default class Form extends Component {
 
@@ -36,8 +39,8 @@ export default class Form extends Component {
         return (
             <form onSubmit={handleSubmit}>
                 <label>
-                    <p>Name</p>
-                    <input
+                    <LabelText>Name:</LabelText>
+                    <Input
                         type="text"
                         name="name"
                         id={nameId}
@@ -49,8 +52,8 @@ export default class Form extends Component {
                     />
                 </label>
                 <label>
-                    <p>Number</p>
-                    <input
+                    <LabelText>Number:</LabelText>
+                    <Input
                         type="tel"
                         name="number"
                         id={numberId}
@@ -61,8 +64,12 @@ export default class Form extends Component {
                         required
                     />
                 </label>
-                <button type="submit">Add contact</button>
+                <FormBtn type="submit">Add contact</FormBtn>
             </form>
         )
     }
+}
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }

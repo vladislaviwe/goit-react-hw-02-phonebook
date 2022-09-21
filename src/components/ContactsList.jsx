@@ -1,16 +1,25 @@
 import PropTypes from 'prop-types';
 
+import { ListItem, DeleteBtn, List } from './PhonebookStyled';
+
 export default function ContactList({ items, removeContact }) {
     const elements = items.map(({ name, number, id }) => {
         return (
-            <li key={id}>{name}: {number}
-                <button type="button" onClick={() => removeContact(id)}>Delete</button>
-            </li>
+            <ListItem key={id}>{name}: {number}
+                <DeleteBtn type="button" onClick={() => removeContact(id)}>x</DeleteBtn>
+            </ListItem>
         )
     })
-    return (
-        <ol>{elements}</ol>
-    )
+
+    if (!items.length) {
+        return (
+            <p><b>Your contacts list is empty</b></p>
+        )
+    } else {
+        return (
+            <List>{elements}</List>
+        )
+    }
 }
 
 ContactList.propTypes = {

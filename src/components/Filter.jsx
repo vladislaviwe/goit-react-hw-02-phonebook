@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { LabelText, Input } from './PhonebookStyled';
 
 export default function Filter({ filter, handleChange }) {
     return (
         <label>
-            <p>Find contacts by name</p>
-            <input type="text" name="filter" value={filter} onChange={handleChange}/>
+            <LabelText>Find contacts by name:</LabelText>
+            <Input type="text" name="filter" value={filter} onChange={handleChange}/>
         </label>
     )
 }
