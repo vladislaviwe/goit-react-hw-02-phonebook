@@ -21,13 +21,18 @@ export const FormBtn = styled.button`
     padding: 10px;
     margin: 16px auto 0;
 
-    background-color: aquamarine;
+    background-color: #c9faea;
 
     border: 2px solid black;
     border-radius: 10px;
 
-    &:hover, &:focus {
-        background-color: #48dcaa;
+    &:hover {
+        background-color: #a0f8db;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    &:focus {
+        background-color: aquamarine;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     }
 `
@@ -63,12 +68,17 @@ export const ListItem = styled.li`
 `
 
 export const DeleteBtn = styled.button`
-    background-color: c9faea;
+    background-color: #c9faea;
 
     border-radius: 20px;
 
-    &:hover, &:focus {
-        background-color: #48dcaa;
+    &:hover {
+        background-color: #a0f8db;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    &:focus {
+        background-color: aquamarine;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     }
 `
